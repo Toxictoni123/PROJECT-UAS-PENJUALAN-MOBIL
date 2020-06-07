@@ -31,10 +31,11 @@
  a{text-decoration: none; color: black;}
  a:hover{text-decoration: underline;color: #111;}
  #wrap{margin: 0 auto;width: 965px;}
- #header{height: 130px;margin: 0 auto;width: 965px;background: blue;}
- #header h1{font-size: 28px; letter-spacing: -1px; padding: 20px 0 0 20px; color: #ffffff;}
+ #header{height: 140px;margin: 0 auto;width: 965px;background: blue;}
+ #header h1{font-size: 28px; letter-spacing: -1px; padding: 20px 0 0 20px;}
  #header h1 a{color: white;text-decoration: none;font-weight: 100;letter-spacing: -2px;}
  #header h2{font-size: 19px;color: white;padding: 5px 0 0 20px;letter-spacing: -1px;font-weight: 100;}
+ #header h4{font-size: 14px;color: white;padding: 5px 0 0 20px;letter-spacing: -1px;font-weight: 100;}
  #header img{width: 110px;height: 110px;float: right;padding-right: 50px;padding-top: 10px;padding-bottom: 10px;}
  #menu{height: 30px;margin: 0 auto;width: 965px;line-height: 30px;background: black;}
  #menu ul{list-style-type: none;padding-left: 20px;}

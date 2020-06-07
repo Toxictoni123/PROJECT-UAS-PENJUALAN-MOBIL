@@ -16,6 +16,7 @@
                <h1><a>PT. Wira Muda</a></h1><br>
                <h2>Website Rental Mobil UBSI</h2>
                <h2>Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat</h2>
+               <h4>Telpon 021-123456</h4>
                <%--akhir dari header--%>
             </div>
             
