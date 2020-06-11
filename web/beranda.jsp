@@ -89,8 +89,7 @@
                    </table>
                    <div class="footer">                     
                         support by<a href="http://bsi.ac.id/"> Tugas UAS prodi SIA</a>,<br>                       
-                   </div>
-                  
+                   </div>                 
                </div> 
                <div style="clear:both"></div>
              <%--akhir isi content--%>
