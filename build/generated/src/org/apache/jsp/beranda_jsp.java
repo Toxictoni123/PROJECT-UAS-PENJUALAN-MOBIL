@@ -96,6 +96,7 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("               <h1><a>PT. Wira Muda</a></h1><br>\n");
       out.write("               <h2>Website Rental Mobil UBSI</h2>\n");
       out.write("               <h2>Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat</h2>\n");
+      out.write("               <h4>Telpon 021-123456</h4>\n");
       out.write("               ");
       out.write("\n");
       out.write("            </div>\n");
