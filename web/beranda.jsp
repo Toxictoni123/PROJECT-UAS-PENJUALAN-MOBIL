@@ -42,8 +42,8 @@
                    
                     <h2>Transaksi</h2>
                     <ul>
+                        <li><a href="transaksi.jsp?hal=transaksi">Pemesanan Mobil</a></li>
                         <li><a href="transaksi.jsp?hal=transaksi">Penjualan Mobil</a></li>
-                        
                     </ul>
                
                     <h2>Laporan</h2>
