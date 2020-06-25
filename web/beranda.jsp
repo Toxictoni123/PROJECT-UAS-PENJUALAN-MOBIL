@@ -36,21 +36,21 @@
                     <h2>Data Master</h2>
                     <ul>
                         <li><a href="beranda.jsp?hal=tampil_mobil">Daftar Mobil</a></li>
+                        <li><a href="beranda.jsp?hal=tampil_user">Daftar User</a></li>
                         <li><a href="beranda.jsp?hal=tampil_supplier">Daftar Supplier</a></li>
-                        <li><a href="#">User</a></li>
                     </ul>
                    
                     <h2>Transaksi</h2>
                     <ul>
-                        <li><a href="transaksi.jsp?hal=transaksi">Mobil disewa</a></li>
-                        
+                        <li><a href="transaksi.jsp?hal=transaksi">Pemesanan Mobil</a></li>
+                        <li><a href="transaksi.jsp?hal=transaksi">Penjualan Mobil</a></li>
                     </ul>
                
                     <h2>Laporan</h2>
                     <ul>
-                        <li><a href="#">Laporan Master Akun</a></li>
-                        <li><a href="#">Laporan Kas Masuk</a></li>
-                        <li><a href="#">Laporan Kas Keluar</a></li>
+                        <li><a href="#">Laporan Data Mobil</a></li>
+                        <li><a href="#">Laporan Data Supplier</a></li>
+                        <li><a href="#">Laporan Penjualan</a></li>
                     </ul>
                 </div>
                 <%-- akhir left content --%>
@@ -70,6 +70,15 @@
                                      </c:when>
                                      <c:when test="${param.hal=='input_mobil'}">
                                          <%@include file="input_mobil.jsp" %>           
+                                     </c:when>
+                                     <c:when test="${param.hal=='tampil_user'}">
+                                         <%@include file="tampil_user.jsp" %>           
+                                     </c:when>
+                                     <c:when test="${param.hal=='edit_user'}">
+                                         <%@include file="edit_user.jsp" %>           
+                                     </c:when>
+                                     <c:when test="${param.hal=='input_user'}">
+                                         <%@include file="input_user.jsp" %>           
                                      </c:when>
                                      <c:when test="${param.hal=='tampil_supplier'}">
                                          <%@include file="tampil_supplier.jsp" %>           

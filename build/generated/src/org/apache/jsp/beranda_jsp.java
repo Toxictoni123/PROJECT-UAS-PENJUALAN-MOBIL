@@ -76,79 +76,79 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <title>Penjualan Mobil</title>\n");
-      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"config/style.css\" media=\"screen\">\n");
-      out.write("         <link href=\"config/cssTable.css\" rel=\"stylesheet\" type=\"text/css\" />\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <title>Penjualan Mobil</title>\r\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"config/style.css\" media=\"screen\">\r\n");
+      out.write("         <link href=\"config/cssTable.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body>\r\n");
       out.write("        ");
-      out.write("  \n");
-      out.write("        <div id=\"wrap\">\n");
-      out.write("            <div id=\"header\">\n");
+      out.write("  \r\n");
+      out.write("        <div id=\"wrap\">\r\n");
+      out.write("            <div id=\"header\">\r\n");
       out.write("               ");
-      out.write("\n");
-      out.write("               <img src=\"images/logo-bsi.png\">\n");
-      out.write("               <h1><a>PT. Wira Muda</a></h1><br>\n");
-      out.write("               <h2>Website Rental Mobil UBSI</h2>\n");
-      out.write("               <h2>Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat</h2>\n");
-      out.write("               <h4>Telpon 021-123456</h4>\n");
+      out.write("\r\n");
+      out.write("               <img src=\"images/logo-bsi.png\">\r\n");
+      out.write("               <h1><a>PT. Wira Muda</a></h1><br>\r\n");
+      out.write("               <h2>Website Rental Mobil UBSI</h2>\r\n");
+      out.write("               <h2>Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat</h2>\r\n");
+      out.write("               <h4>Telpon 021-123456</h4>\r\n");
       out.write("               ");
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            \n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            \r\n");
       out.write("            ");
-      out.write("\n");
-      out.write("            <div id=\"menu\">\n");
-      out.write("               <ul>\n");
-      out.write("                   <li><a href=\"beranda.jsp\">Home</a></li>\n");
+      out.write("\r\n");
+      out.write("            <div id=\"menu\">\r\n");
+      out.write("               <ul>\r\n");
+      out.write("                   <li><a href=\"beranda.jsp\">Home</a></li>\r\n");
       out.write("                   <li><a href=\"\">About</a></li>");
-      out.write("\n");
-      out.write("               </ul>\n");
-      out.write("            </div>\n");
+      out.write("\r\n");
+      out.write("               </ul>\r\n");
+      out.write("            </div>\r\n");
       out.write("            ");
-      out.write("  \n");
-      out.write("            \n");
+      out.write("  \r\n");
+      out.write("            \r\n");
       out.write("            ");
-      out.write("\n");
-      out.write("            <div id=\"content\">\n");
+      out.write("\r\n");
+      out.write("            <div id=\"content\">\r\n");
       out.write("                ");
-      out.write("\n");
-      out.write("                <div class=\"left\">\n");
-      out.write("                    <h2>Data Master</h2>\n");
-      out.write("                    <ul>\n");
-      out.write("                        <li><a href=\"beranda.jsp?hal=tampil_mobil\">Daftar Mobil</a></li>\n");
-      out.write("                        <li><a href=\"beranda.jsp?hal=tampil_supplier\">Daftar Supplier</a></li>\n");
-      out.write("                        <li><a href=\"#\">User</a></li>\n");
-      out.write("                    </ul>\n");
-      out.write("                   \n");
-      out.write("                    <h2>Transaksi</h2>\n");
-      out.write("                    <ul>\n");
-      out.write("                        <li><a href=\"transaksi.jsp?hal=transaksi\">Mobil disewa</a></li>\n");
-      out.write("                        \n");
-      out.write("                    </ul>\n");
-      out.write("               \n");
-      out.write("                    <h2>Laporan</h2>\n");
-      out.write("                    <ul>\n");
-      out.write("                        <li><a href=\"#\">Laporan Master Akun</a></li>\n");
-      out.write("                        <li><a href=\"#\">Laporan Kas Masuk</a></li>\n");
-      out.write("                        <li><a href=\"#\">Laporan Kas Keluar</a></li>\n");
-      out.write("                    </ul>\n");
-      out.write("                </div>\n");
+      out.write("\r\n");
+      out.write("                <div class=\"left\">\r\n");
+      out.write("                    <h2>Data Master</h2>\r\n");
+      out.write("                    <ul>\r\n");
+      out.write("                        <li><a href=\"beranda.jsp?hal=tampil_mobil\">Daftar Mobil</a></li>\r\n");
+      out.write("                        <li><a href=\"beranda.jsp?hal=tampil_supplier\">Daftar Supplier</a></li>\r\n");
+      out.write("                        <li><a href=\"#\">User</a></li>\r\n");
+      out.write("                    </ul>\r\n");
+      out.write("                   \r\n");
+      out.write("                    <h2>Transaksi</h2>\r\n");
+      out.write("                    <ul>\r\n");
+      out.write("                        <li><a href=\"transaksi.jsp?hal=transaksi\">Mobil disewa</a></li>\r\n");
+      out.write("                        \r\n");
+      out.write("                    </ul>\r\n");
+      out.write("               \r\n");
+      out.write("                    <h2>Laporan</h2>\r\n");
+      out.write("                    <ul>\r\n");
+      out.write("                        <li><a href=\"#\">Laporan Master Akun</a></li>\r\n");
+      out.write("                        <li><a href=\"#\">Laporan Kas Masuk</a></li>\r\n");
+      out.write("                        <li><a href=\"#\">Laporan Kas Keluar</a></li>\r\n");
+      out.write("                    </ul>\r\n");
+      out.write("                </div>\r\n");
       out.write("                ");
-      out.write("\n");
-      out.write("                \n");
-      out.write("               <div class=\"right\">\n");
-      out.write("                   \n");
-      out.write("                   <table width=\"100%\">\n");
-      out.write("                   <tr>\n");
-      out.write("                        <td valign=\"top\" width=\"110%\">\n");
+      out.write("\r\n");
+      out.write("                \r\n");
+      out.write("               <div class=\"right\">\r\n");
+      out.write("                   \r\n");
+      out.write("                   <table width=\"100%\">\r\n");
+      out.write("                   <tr>\r\n");
+      out.write("                        <td valign=\"top\" width=\"110%\">\r\n");
       out.write("                            ");
-      out.write("\n");
+      out.write("\r\n");
       out.write("                             ");
       //  c:choose
       org.apache.taglibs.standard.tag.common.core.ChooseTag _jspx_th_c_choose_0 = (org.apache.taglibs.standard.tag.common.core.ChooseTag) _jspx_tagPool_c_choose.get(org.apache.taglibs.standard.tag.common.core.ChooseTag.class);
@@ -157,7 +157,7 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
       int _jspx_eval_c_choose_0 = _jspx_th_c_choose_0.doStartTag();
       if (_jspx_eval_c_choose_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           //  c:when
           org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
@@ -167,7 +167,7 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
           int _jspx_eval_c_when_0 = _jspx_th_c_when_0.doStartTag();
           if (_jspx_eval_c_when_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
             do {
-              out.write("\n");
+              out.write("\r\n");
               out.write("                                         ");
               out.write("\n");
               out.write("\n");
@@ -248,7 +248,7 @@ kon.close();
               out.write("\n");
               out.write("    </body>\n");
               out.write("</html>\n");
-              out.write("           \n");
+              out.write("           \r\n");
               out.write("                                     ");
               int evalDoAfterBody = _jspx_th_c_when_0.doAfterBody();
               if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -260,7 +260,7 @@ kon.close();
             return;
           }
           _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_0);
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           //  c:when
           org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_1 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
@@ -270,7 +270,7 @@ kon.close();
           int _jspx_eval_c_when_1 = _jspx_th_c_when_1.doStartTag();
           if (_jspx_eval_c_when_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
             do {
-              out.write("\n");
+              out.write("\r\n");
               out.write("                                         ");
               out.write("\n");
               out.write("\n");
@@ -357,7 +357,7 @@ kon.close();
               out.write("       </form>\n");
               out.write("    </body>\n");
               out.write("</html>\n");
-              out.write("           \n");
+              out.write("           \r\n");
               out.write("                                     ");
               int evalDoAfterBody = _jspx_th_c_when_1.doAfterBody();
               if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -369,11 +369,11 @@ kon.close();
             return;
           }
           _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_1);
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           if (_jspx_meth_c_when_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
             return;
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           //  c:when
           org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_3 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
@@ -383,7 +383,7 @@ kon.close();
           int _jspx_eval_c_when_3 = _jspx_th_c_when_3.doStartTag();
           if (_jspx_eval_c_when_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
             do {
-              out.write("\n");
+              out.write("\r\n");
               out.write("                                         ");
               out.write("\n");
               out.write("\n");
@@ -464,7 +464,7 @@ kon.close();
               out.write("\n");
               out.write("    </body>\n");
               out.write("</html>\n");
-              out.write("           \n");
+              out.write("           \r\n");
               out.write("                                     ");
               int evalDoAfterBody = _jspx_th_c_when_3.doAfterBody();
               if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -476,7 +476,7 @@ kon.close();
             return;
           }
           _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_3);
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           //  c:when
           org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_4 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
@@ -486,7 +486,7 @@ kon.close();
           int _jspx_eval_c_when_4 = _jspx_th_c_when_4.doStartTag();
           if (_jspx_eval_c_when_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
             do {
-              out.write("\n");
+              out.write("\r\n");
               out.write("                                         ");
               out.write("\n");
               out.write("\n");
@@ -573,7 +573,7 @@ kon.close();
               out.write("       </form>\n");
               out.write("    </body>\n");
               out.write("</html>\n");
-              out.write("           \n");
+              out.write("           \r\n");
               out.write("                                     ");
               int evalDoAfterBody = _jspx_th_c_when_4.doAfterBody();
               if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -585,15 +585,15 @@ kon.close();
             return;
           }
           _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_4);
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           if (_jspx_meth_c_when_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
             return;
-          out.write("\n");
+          out.write("\r\n");
           out.write("                                     ");
           if (_jspx_meth_c_otherwise_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
             return;
-          out.write("\n");
+          out.write("\r\n");
           out.write("                             ");
           int evalDoAfterBody = _jspx_th_c_choose_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -605,27 +605,23 @@ kon.close();
         return;
       }
       _jspx_tagPool_c_choose.reuse(_jspx_th_c_choose_0);
-      out.write("\n");
-      out.write("                        </td>\n");
-      out.write("                   </tr>\n");
-      out.write("                   </table>\n");
-      out.write("                   <div class=\"footer\">\n");
-      out.write("                      \n");
-      out.write("                        support by<a href=\"http://bsi.ac.id/\"> Tugas UAS prodi SIA</a>,<br>\n");
-      out.write("                        \n");
-      out.write("                       \n");
-      out.write("                   </div>\n");
-      out.write("                  \n");
-      out.write("               </div> \n");
-      out.write("               <div style=\"clear:both\"></div>\n");
+      out.write("\r\n");
+      out.write("                        </td>\r\n");
+      out.write("                   </tr>\r\n");
+      out.write("                   </table>\r\n");
+      out.write("                   <div class=\"footer\">                     \r\n");
+      out.write("                        support by<a href=\"http://bsi.ac.id/\"> Tugas UAS prodi SIA</a>,<br>                       \r\n");
+      out.write("                   </div>                 \r\n");
+      out.write("               </div> \r\n");
+      out.write("               <div style=\"clear:both\"></div>\r\n");
       out.write("             ");
-      out.write("\n");
-      out.write("           </div>\n");
+      out.write("\r\n");
+      out.write("           </div>\r\n");
       out.write("          ");
-      out.write("\n");
-      out.write("        </div>       \n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("        </div>       \r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -651,7 +647,7 @@ kon.close();
     int _jspx_eval_c_when_2 = _jspx_th_c_when_2.doStartTag();
     if (_jspx_eval_c_when_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\n");
+        out.write("\r\n");
         out.write("                                         ");
         out.write("\n");
         out.write("<!DOCTYPE html>\n");
@@ -702,7 +698,7 @@ kon.close();
         out.write("        </form>\n");
         out.write("    </body>\n");
         out.write("</html>\n");
-        out.write("           \n");
+        out.write("           \r\n");
         out.write("                                     ");
         int evalDoAfterBody = _jspx_th_c_when_2.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -729,7 +725,7 @@ kon.close();
     int _jspx_eval_c_when_5 = _jspx_th_c_when_5.doStartTag();
     if (_jspx_eval_c_when_5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\n");
+        out.write("\r\n");
         out.write("                                         ");
         out.write("\n");
         out.write("<!DOCTYPE html>\n");
@@ -780,7 +776,7 @@ kon.close();
         out.write("        </form>\n");
         out.write("    </body>\n");
         out.write("</html>\n");
-        out.write("           \n");
+        out.write("           \r\n");
         out.write("                                     ");
         int evalDoAfterBody = _jspx_th_c_when_5.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -806,7 +802,7 @@ kon.close();
     int _jspx_eval_c_otherwise_0 = _jspx_th_c_otherwise_0.doStartTag();
     if (_jspx_eval_c_otherwise_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\n");
+        out.write("\r\n");
         out.write("                                         ");
         out.write("\n");
         out.write("\n");
@@ -825,7 +821,7 @@ kon.close();
         out.write("        </p>\n");
         out.write("    </body>\n");
         out.write("</html>\n");
-        out.write(" \n");
+        out.write(" \r\n");
         out.write("                                     ");
         int evalDoAfterBody = _jspx_th_c_otherwise_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
