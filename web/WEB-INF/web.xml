@@ -12,6 +12,10 @@
         <servlet-name>userServlet</servlet-name>
         <servlet-class>control.userServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletPemesanan</servlet-name>
+        <servlet-class>control.ServletPemesanan</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mobilServlet</servlet-name>
         <url-pattern>/mobilServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>userServlet</servlet-name>
         <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPemesanan</servlet-name>
+        <url-pattern>/ServletPemesanan</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
