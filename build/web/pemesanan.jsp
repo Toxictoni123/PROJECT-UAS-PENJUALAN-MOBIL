@@ -27,7 +27,7 @@
         <h1>Transaksi Pemesanan Mobil</h1><br>
         <form action="ServletPemesanan" method="post">
             <table border="0">
-                <h2>Data Mobil</h2>
+                <h3>Data Mobil</h3>
                 <tr>
                     <td>No Pesan</td>
                     <td>: <input type="text" name="no_pesan" id="nopesan" value="" readonly="readonly">

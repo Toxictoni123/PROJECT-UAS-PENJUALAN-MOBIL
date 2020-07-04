@@ -44,8 +44,8 @@
  #menu ul li a:hover{color: #90ee90;text-decoration: none;}
  #content{background-color: #C1DAD7 ;padding: 0 10px;}
  .right{float: right;width: 745px;text-align: justify;padding-top: 5px;font-size: 12px;}
- .right h2{font-size: 18px;font-weight: 100;padding-left: 10px;height: 30px;line-height: 30px;background: red;}
- .right h2 a{text-decoration: none;color: #fff;}
+ .right h2{font-size: 18px;font-weight: 100;padding-left: 10px;height: 30px;line-height: 30px;}
+ .right h2 a{text-decoration: none;}
  .right h2 a:hover{color: #111;}
  .left{float: left;width: 180px;padding-top: 5px;}
  .left h2{margin: 5px 0 0 0;padding-left: 10px;height: 30px;line-height: 30px;background: white;color: black;font-size: 13px;}

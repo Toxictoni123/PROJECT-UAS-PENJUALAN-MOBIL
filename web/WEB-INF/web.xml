@@ -16,6 +16,10 @@
         <servlet-name>ServletPemesanan</servlet-name>
         <servlet-class>control.ServletPemesanan</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletPenjualan</servlet-name>
+        <servlet-class>control.ServletPenjualan</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mobilServlet</servlet-name>
         <url-pattern>/mobilServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ServletPemesanan</servlet-name>
         <url-pattern>/ServletPemesanan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPenjualan</servlet-name>
+        <url-pattern>/ServletPenjualan</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
