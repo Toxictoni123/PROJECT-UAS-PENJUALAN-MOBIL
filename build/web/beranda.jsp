@@ -14,7 +14,7 @@
                <%--awal header--%>
                <img src="images/logo-bsi.png">
                <h1><a>PT. Wira Muda</a></h1><br>
-               <h2>Website Rental Mobil UBSI</h2>
+               <h2>Website Penjualan Mobil UBSI</h2>
                <h2>Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat</h2>
                <h4>Telpon 021-123456</h4>
                <%--akhir dari header--%>
@@ -42,14 +42,14 @@
                    
                     <h2>Transaksi</h2>
                     <ul>
+                        <li><a href="transaksi.jsp?hal=transaksi">Pemesanan Mobil</a></li>
                         <li><a href="transaksi.jsp?hal=transaksi">Penjualan Mobil</a></li>
-                        
                     </ul>
                
                     <h2>Laporan</h2>
                     <ul>
                         <li><a href="#">Laporan Data Mobil</a></li>
-                        <li><a href="#">Laporan Data Supplier</a></li>
+                        <li><a href="#">Laporan Retur</a></li>
                         <li><a href="#">Laporan Penjualan</a></li>
                     </ul>
                 </div>
