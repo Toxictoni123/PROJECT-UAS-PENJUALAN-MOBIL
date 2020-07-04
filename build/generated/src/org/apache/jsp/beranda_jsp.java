@@ -11,6 +11,10 @@ import control.koneksi;
 import java.sql.*;
 import control.koneksi;
 import java.sql.*;
+import control.koneksi;
+import java.sql.*;
+import control.koneksi;
+import java.sql.*;
 
 public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -20,10 +24,13 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(7);
+    _jspx_dependants = new java.util.ArrayList<String>(10);
     _jspx_dependants.add("/tampil_mobil.jsp");
     _jspx_dependants.add("/edit_mobil.jsp");
     _jspx_dependants.add("/input_mobil.jsp");
+    _jspx_dependants.add("/tampil_user.jsp");
+    _jspx_dependants.add("/edit_user.jsp");
+    _jspx_dependants.add("/input_user.jsp");
     _jspx_dependants.add("/tampil_supplier.jsp");
     _jspx_dependants.add("/edit_supplier.jsp");
     _jspx_dependants.add("/input_supplier.jsp");
@@ -94,7 +101,7 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("               <img src=\"images/logo-bsi.png\">\r\n");
       out.write("               <h1><a>PT. Wira Muda</a></h1><br>\r\n");
-      out.write("               <h2>Website Rental Mobil UBSI</h2>\r\n");
+      out.write("               <h2>Website Penjualan Mobil UBSI</h2>\r\n");
       out.write("               <h2>Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat</h2>\r\n");
       out.write("               <h4>Telpon 021-123456</h4>\r\n");
       out.write("               ");
@@ -122,21 +129,21 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <h2>Data Master</h2>\r\n");
       out.write("                    <ul>\r\n");
       out.write("                        <li><a href=\"beranda.jsp?hal=tampil_mobil\">Daftar Mobil</a></li>\r\n");
+      out.write("                        <li><a href=\"beranda.jsp?hal=tampil_user\">Daftar User</a></li>\r\n");
       out.write("                        <li><a href=\"beranda.jsp?hal=tampil_supplier\">Daftar Supplier</a></li>\r\n");
-      out.write("                        <li><a href=\"#\">User</a></li>\r\n");
       out.write("                    </ul>\r\n");
       out.write("                   \r\n");
       out.write("                    <h2>Transaksi</h2>\r\n");
       out.write("                    <ul>\r\n");
-      out.write("                        <li><a href=\"transaksi.jsp?hal=transaksi\">Mobil disewa</a></li>\r\n");
-      out.write("                        \r\n");
+      out.write("                        <li><a href=\"transaksi.jsp?hal=transaksi\">Pemesanan Mobil</a></li>\r\n");
+      out.write("                        <li><a href=\"transaksi.jsp?hal=transaksi\">Penjualan Mobil</a></li>\r\n");
       out.write("                    </ul>\r\n");
       out.write("               \r\n");
       out.write("                    <h2>Laporan</h2>\r\n");
       out.write("                    <ul>\r\n");
-      out.write("                        <li><a href=\"#\">Laporan Master Akun</a></li>\r\n");
-      out.write("                        <li><a href=\"#\">Laporan Kas Masuk</a></li>\r\n");
-      out.write("                        <li><a href=\"#\">Laporan Kas Keluar</a></li>\r\n");
+      out.write("                        <li><a href=\"#\">Laporan Data Mobil</a></li>\r\n");
+      out.write("                        <li><a href=\"#\">Laporan Retur</a></li>\r\n");
+      out.write("                        <li><a href=\"#\">Laporan Penjualan</a></li>\r\n");
       out.write("                    </ul>\r\n");
       out.write("                </div>\r\n");
       out.write("                ");
@@ -379,9 +386,225 @@ kon.close();
           org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_3 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
           _jspx_th_c_when_3.setPageContext(_jspx_page_context);
           _jspx_th_c_when_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-          _jspx_th_c_when_3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='tampil_supplier'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+          _jspx_th_c_when_3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='tampil_user'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
           int _jspx_eval_c_when_3 = _jspx_th_c_when_3.doStartTag();
           if (_jspx_eval_c_when_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+            do {
+              out.write("\r\n");
+              out.write("                                         ");
+              out.write("\n");
+              out.write("\n");
+              out.write("\n");
+              out.write("\n");
+              out.write("<!DOCTYPE html>\n");
+              out.write("<html>\n");
+              out.write("    <head>\n");
+              out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+              out.write("        <title>Data Master User</title>\n");
+              out.write("    </head>\n");
+              out.write("    <body>\n");
+              out.write("        <table width=\"667\" height=\"150\" border=\"1\" align=\"center\">\n");
+              out.write("            <tr align=\"center\">\n");
+              out.write("                <td colspan=\"6\"><h3>DATA USER</h3></td>\n");
+              out.write("            </tr>\n");
+              out.write("            <tr>\n");
+              out.write("                <th>ID USER</th>\n");
+              out.write("                <th>NAMA USER</th>\n");
+              out.write("                <th>HAK AKSES</th>\n");
+              out.write("                <th>PASSWORD</th>\n");
+              out.write("                <th>AKSI</th>\n");
+              out.write("                \n");
+              out.write("            </tr>\n");
+              out.write("            ");
+//koneksi database--
+                
+                String id_user=null;
+                String nm_user=null;
+                String hak_akses=null;
+                String password=null;
+                ResultSet rs = null;              
+                
+                koneksi kon = new koneksi();
+                rs = kon.stmt.executeQuery("SELECT * FROM user ORDER BY id_user asc");
+                    
+                    while(rs.next())
+                    {
+                        id_user=rs.getString("id_user");
+                        nm_user=rs.getString(2);
+                        hak_akses=rs.getString(3);
+                        password=rs.getString(4);
+                        
+                    
+            
+              out.write("\n");
+              out.write("            <tr>\n");
+              out.write("                <td>");
+ out.println(id_user); 
+              out.write("</td>\n");
+              out.write("                <td>");
+ out.println(nm_user); 
+              out.write("</td>\n");
+              out.write("                <td>");
+ out.println(hak_akses); 
+              out.write("</td>\n");
+              out.write("                <td>");
+ out.println(password); 
+              out.write("</td>\n");
+              out.write("                <td><a href=\"beranda.jsp?hal=edit_user&id_user=");
+ out.println(id_user); 
+              out.write(" \">EDIT</a>\n");
+              out.write("                 || <a href=\"userServlet?aksi=Delete&id_user=");
+ out.println(id_user); 
+              out.write(" \">HAPUS</a>\n");
+              out.write("                </td>\n");
+              out.write("                \n");
+              out.write("            </tr>\n");
+              out.write("            ");
+}
+              out.write("\n");
+              out.write("            <tr>\n");
+              out.write("                <td colspan=\"6\" align=\"center\"><h3><a href=\"beranda.jsp?hal=input_user\">Tambah Data</a></h3></td>\n");
+              out.write("            </tr>\n");
+              out.write("        </table> \n");
+              out.write("        ");
+kon.close();
+              out.write("\n");
+              out.write("    </body>\n");
+              out.write("</html>\n");
+              out.write("           \r\n");
+              out.write("                                     ");
+              int evalDoAfterBody = _jspx_th_c_when_3.doAfterBody();
+              if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+                break;
+            } while (true);
+          }
+          if (_jspx_th_c_when_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+            _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_3);
+            return;
+          }
+          _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_3);
+          out.write("\r\n");
+          out.write("                                     ");
+          //  c:when
+          org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_4 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+          _jspx_th_c_when_4.setPageContext(_jspx_page_context);
+          _jspx_th_c_when_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+          _jspx_th_c_when_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='edit_user'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+          int _jspx_eval_c_when_4 = _jspx_th_c_when_4.doStartTag();
+          if (_jspx_eval_c_when_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+            do {
+              out.write("\r\n");
+              out.write("                                         ");
+              out.write("\r\n");
+              out.write("\r\n");
+              out.write("\r\n");
+//koneksi database--
+                
+                String id_user=request.getParameter("id_user");
+                String nm_user=null;
+                String hak_akses=null;
+                String password=null;
+                ResultSet rs = null;
+                
+                
+                koneksi kon = new koneksi();
+                rs = kon.stmt.executeQuery("SELECT * FROM user where id_user = '" + id_user +"'");
+                    if (rs.next())
+                    {
+                        id_user=rs.getString(1);
+                        nm_user=rs.getString(2);
+                        hak_akses=rs.getString(3);
+                        password=rs.getString(4);
+                    }
+            
+              out.write("\r\n");
+              out.write("\r\n");
+              out.write("<!DOCTYPE html>\r\n");
+              out.write("<html>\r\n");
+              out.write("    <head>\r\n");
+              out.write("        <title>Ubah Data User</title>\r\n");
+              out.write("    </head>\r\n");
+              out.write("    <body>\r\n");
+              out.write("       <form method=\"POST\" action=\"userServlet\">\r\n");
+              out.write("        <center>\r\n");
+              out.write("         <table border=\"2\">\r\n");
+              out.write("             <tr>\r\n");
+              out.write("                 <td colspan=\"3\"><h3>UBAH DATA USER</h3></td>\r\n");
+              out.write("             </tr>\r\n");
+              out.write("             <tr>\r\n");
+              out.write("                 <td>Id User</td>\r\n");
+              out.write("                 <td>:</td>\r\n");
+              out.write("                 <td><input type=\"text\" value=\"");
+              out.print(id_user);
+              out.write("\" readonly=\"\">\r\n");
+              out.write("                     <input type=\"hidden\" name=\"id_user\" value=\"");
+              out.print(id_user);
+              out.write("\"/> \r\n");
+              out.write("                 </td>\r\n");
+              out.write("             </tr>\r\n");
+              out.write("             <tr>\r\n");
+              out.write("                 <td>Nama User</td>\r\n");
+              out.write("                 <td>:</td>\r\n");
+              out.write("                 <td><input type=\"text\" name=\"nm_user\" value=\"");
+              out.print(nm_user);
+              out.write("\"/>\r\n");
+              out.write("                 </td>\r\n");
+              out.write("             </tr>\r\n");
+              out.write("             <tr>\r\n");
+              out.write("                 <td>Hak Akses</td>\r\n");
+              out.write("                 <td>:</td>\r\n");
+              out.write("                 <td><input type=\"text\" name=\"hak_akses\" value=\"");
+              out.print(hak_akses);
+              out.write("\"/>\r\n");
+              out.write("                 </td>    \r\n");
+              out.write("             </tr>\r\n");
+              out.write("             <tr>\r\n");
+              out.write("                 <td>Password</td>\r\n");
+              out.write("                 <td>:</td>\r\n");
+              out.write("                 <td><input type=\"text\" name=\"password\" value=\"");
+              out.print(password);
+              out.write("\"/>\r\n");
+              out.write("                 </td>    \r\n");
+              out.write("             </tr>\r\n");
+              out.write("             <tr>\r\n");
+              out.write("                  <td colspan=\"3\">\r\n");
+              out.write("                       <center>\r\n");
+              out.write("                           <input type=\"Submit\" name=\"aksi\" value=\"Update\">\r\n");
+              out.write("                           <input type=\"Reset\" value=\"Batal\">\r\n");
+              out.write("                           <a href=\"beranda.jsp?hal=tampil_user\">[Lihat Data]</a>\r\n");
+              out.write("                       </center>\r\n");
+              out.write("                  </td>\r\n");
+              out.write("             </tr>\r\n");
+              out.write("         </table>\r\n");
+              out.write("        </center>\r\n");
+              out.write("       </form>\r\n");
+              out.write("    </body>\r\n");
+              out.write("</html>\r\n");
+              out.write("           \r\n");
+              out.write("                                     ");
+              int evalDoAfterBody = _jspx_th_c_when_4.doAfterBody();
+              if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+                break;
+            } while (true);
+          }
+          if (_jspx_th_c_when_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+            _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_4);
+            return;
+          }
+          _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_4);
+          out.write("\r\n");
+          out.write("                                     ");
+          if (_jspx_meth_c_when_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
+            return;
+          out.write("\r\n");
+          out.write("                                     ");
+          //  c:when
+          org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_6 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+          _jspx_th_c_when_6.setPageContext(_jspx_page_context);
+          _jspx_th_c_when_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+          _jspx_th_c_when_6.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='tampil_supplier'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+          int _jspx_eval_c_when_6 = _jspx_th_c_when_6.doStartTag();
+          if (_jspx_eval_c_when_6 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
             do {
               out.write("\r\n");
               out.write("                                         ");
@@ -466,25 +689,25 @@ kon.close();
               out.write("</html>\n");
               out.write("           \r\n");
               out.write("                                     ");
-              int evalDoAfterBody = _jspx_th_c_when_3.doAfterBody();
+              int evalDoAfterBody = _jspx_th_c_when_6.doAfterBody();
               if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
                 break;
             } while (true);
           }
-          if (_jspx_th_c_when_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-            _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_3);
+          if (_jspx_th_c_when_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+            _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_6);
             return;
           }
-          _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_3);
+          _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_6);
           out.write("\r\n");
           out.write("                                     ");
           //  c:when
-          org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_4 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
-          _jspx_th_c_when_4.setPageContext(_jspx_page_context);
-          _jspx_th_c_when_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-          _jspx_th_c_when_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='edit_supplier'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-          int _jspx_eval_c_when_4 = _jspx_th_c_when_4.doStartTag();
-          if (_jspx_eval_c_when_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+          org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_7 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+          _jspx_th_c_when_7.setPageContext(_jspx_page_context);
+          _jspx_th_c_when_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+          _jspx_th_c_when_7.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='edit_supplier'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+          int _jspx_eval_c_when_7 = _jspx_th_c_when_7.doStartTag();
+          if (_jspx_eval_c_when_7 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
             do {
               out.write("\r\n");
               out.write("                                         ");
@@ -575,19 +798,19 @@ kon.close();
               out.write("</html>\n");
               out.write("           \r\n");
               out.write("                                     ");
-              int evalDoAfterBody = _jspx_th_c_when_4.doAfterBody();
+              int evalDoAfterBody = _jspx_th_c_when_7.doAfterBody();
               if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
                 break;
             } while (true);
           }
-          if (_jspx_th_c_when_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-            _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_4);
+          if (_jspx_th_c_when_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+            _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_7);
             return;
           }
-          _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_4);
+          _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_7);
           out.write("\r\n");
           out.write("                                     ");
-          if (_jspx_meth_c_when_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
+          if (_jspx_meth_c_when_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
             return;
           out.write("\r\n");
           out.write("                                     ");
@@ -721,9 +944,87 @@ kon.close();
     org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_5 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
     _jspx_th_c_when_5.setPageContext(_jspx_page_context);
     _jspx_th_c_when_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-    _jspx_th_c_when_5.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='input_supplier'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_when_5.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='input_user'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_when_5 = _jspx_th_c_when_5.doStartTag();
     if (_jspx_eval_c_when_5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                                         ");
+        out.write("\n");
+        out.write("<!DOCTYPE html>\n");
+        out.write("<html>\n");
+        out.write("    <head>\n");
+        out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+        out.write("        <title>Input User</title>\n");
+        out.write("    </head>\n");
+        out.write("    <body>\n");
+        out.write("        <form method=\"POST\" action=\"userServlet\">\n");
+        out.write("         <center>\n");
+        out.write("             <table border=\"0\">\n");
+        out.write("                 <tr>\n");
+        out.write("                     <td colspan=\"3\"><h3>INPUT DATA USER</h3></td>\n");
+        out.write("                 </tr> \n");
+        out.write("                 <tr>\n");
+        out.write("                     <td>Id User</td>\n");
+        out.write("                     <td>:</td>\n");
+        out.write("                     <td><input type=\"text\" name=\"id_user\"></td>\n");
+        out.write("                 </tr>\n");
+        out.write("                 <tr>\n");
+        out.write("                     <td>Nama User</td>\n");
+        out.write("                     <td>:</td>\n");
+        out.write("                     <td><input type=\"text\" name=\"nm_user\"></td>\n");
+        out.write("                 </tr>\n");
+        out.write("                 \n");
+        out.write("                 <tr>\n");
+        out.write("                     <td>Hak Akses</td>\n");
+        out.write("                     <td>:</td>\n");
+        out.write("                     <td><input type=\"text\" name=\"hak_akses\"></td>\n");
+        out.write("                 </tr>\n");
+        out.write("                 <tr>\n");
+        out.write("                     <td>Password</td>\n");
+        out.write("                     <td>:</td>\n");
+        out.write("                     <td><input type=\"text\" name=\"password\"></td>\n");
+        out.write("                 </tr>\n");
+        out.write("                 <tr>\n");
+        out.write("                     <td colspan=\"3\">\n");
+        out.write("                       <center>\n");
+        out.write("                           <input type=\"Submit\" name=\"aksi\" value=\"Simpan\">\n");
+        out.write("                           <input type=\"Reset\" value=\"Batal\">\n");
+        out.write("                           <a href=\"beranda.jsp?hal=tampil_user\">[Lihat Data]</a>\n");
+        out.write("                       </center>   \n");
+        out.write("                     </td>\n");
+        out.write("                 </tr>\n");
+        out.write("             </table>     \n");
+        out.write("         </center>\n");
+        out.write("        </form>\n");
+        out.write("    </body>\n");
+        out.write("</html>\n");
+        out.write("           \r\n");
+        out.write("                                     ");
+        int evalDoAfterBody = _jspx_th_c_when_5.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_when_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_5);
+      return true;
+    }
+    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_when_8(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:when
+    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_8 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+    _jspx_th_c_when_8.setPageContext(_jspx_page_context);
+    _jspx_th_c_when_8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+    _jspx_th_c_when_8.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.hal=='input_supplier'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_when_8 = _jspx_th_c_when_8.doStartTag();
+    if (_jspx_eval_c_when_8 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
         out.write("                                         ");
@@ -778,16 +1079,16 @@ kon.close();
         out.write("</html>\n");
         out.write("           \r\n");
         out.write("                                     ");
-        int evalDoAfterBody = _jspx_th_c_when_5.doAfterBody();
+        int evalDoAfterBody = _jspx_th_c_when_8.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
       } while (true);
     }
-    if (_jspx_th_c_when_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_5);
+    if (_jspx_th_c_when_8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_8);
       return true;
     }
-    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_5);
+    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_8);
     return false;
   }
 
@@ -815,7 +1116,7 @@ kon.close();
         out.write("    </head>\n");
         out.write("    <body>\n");
         out.write("        <p style=\"text-align: justify; font-size: 20px\">\n");
-        out.write("            <img src=\"images/Mobil wisata.png\" style=\"float: left; margin: 0 9px 3px 0;\" width=\"35%\" height=\"35%\"/><br>\n");
+        out.write("            <img src=\"images/Mobil1.png\" style=\"float: left; margin: 0 9px 3px 0;\" width=\"35%\" height=\"35%\"/><br>\n");
         out.write("            SELAMAT DATANG<br><br>\n");
         out.write("            <span style=\"font-size: 20px; font-weight: bold\">KENYAMANAN ANDA, KEBAHAGIAAN KAMI !!!</span>\n");
         out.write("        </p>\n");

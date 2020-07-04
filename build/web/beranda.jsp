@@ -24,7 +24,7 @@
             <div id="menu">
                <ul>
                    <li><a href="beranda.jsp">Home</a></li>
-                   <li><a href="">About</a></li><%--buat halaman about dengan biodata mahasiswa--%>
+                   <li><a href="">About</a></li>
                </ul>
             </div>
             <%--akhir menu --%>  
@@ -42,15 +42,16 @@
                    
                     <h2>Transaksi</h2>
                     <ul>
-                        <li><a href="transaksi.jsp?hal=transaksi">Pemesanan Mobil</a></li>
-                        <li><a href="transaksi.jsp?hal=transaksi">Penjualan Mobil</a></li>
+                        <li><a href="beranda.jsp?hal=pesan">Pemesanan Mobil</a></li>
+                        <li><a href="beranda.jsp?hal=jual">Penjualan Mobil</a></li>
+                        <li><a href="beranda.jsp?hal=retur">Retur Penjualan</a></li>
                     </ul>
                
                     <h2>Laporan</h2>
                     <ul>
-                        <li><a href="#">Laporan Data Mobil</a></li>
-                        <li><a href="#">Laporan Retur</a></li>
-                        <li><a href="#">Laporan Penjualan</a></li>
+                        <li><a href="beranda.jsp?hal=cetaklapmobil">Laporan Data Mobil</a></li>
+                        <li><a href="beranda.jsp?hal=cetaklapretur">Laporan Retur</a></li>
+                        <li><a href="beranda.jsp?hal=cetaklappenjualan">Laporan Penjualan</a></li>
                     </ul>
                 </div>
                 <%-- akhir left content --%>
@@ -61,38 +62,41 @@
                    <tr>
                         <td valign="top" width="110%">
                             <%--isi content sebelah kanan--%>
-                             <c:choose>
-                                     <c:when test="${param.hal=='tampil_mobil'}">
-                                         <%@include file="tampil_mobil.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='edit_mobil'}">
-                                         <%@include file="edit_mobil.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='input_mobil'}">
-                                         <%@include file="input_mobil.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='tampil_user'}">
-                                         <%@include file="tampil_user.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='edit_user'}">
-                                         <%@include file="edit_user.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='input_user'}">
-                                         <%@include file="input_user.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='tampil_supplier'}">
-                                         <%@include file="tampil_supplier.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='edit_supplier'}">
-                                         <%@include file="edit_supplier.jsp" %>           
-                                     </c:when>
-                                     <c:when test="${param.hal=='input_supplier'}">
-                                         <%@include file="input_supplier.jsp" %>           
-                                     </c:when>
-                                     <c:otherwise>
-                                         <%@include file="filehome.jsp" %> 
-                                     </c:otherwise>
-                             </c:choose>
+                            <c:choose>
+                                    <c:when test="${param.hal=='tampil_mobil'}">
+                                        <%@include file="tampil_mobil.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='edit_mobil'}">
+                                        <%@include file="edit_mobil.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='input_mobil'}">
+                                        <%@include file="input_mobil.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='tampil_user'}">
+                                        <%@include file="tampil_user.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='edit_user'}">
+                                        <%@include file="edit_user.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='input_user'}">
+                                        <%@include file="input_user.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='tampil_supplier'}">
+                                        <%@include file="tampil_supplier.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='edit_supplier'}">
+                                        <%@include file="edit_supplier.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='input_supplier'}">
+                                        <%@include file="input_supplier.jsp" %>           
+                                    </c:when>
+                                    <c:when test="${param.hal=='pesan'}">
+                                        <%@include file="pemesanan.jsp" %>           
+                                    </c:when>
+                                    <c:otherwise>
+                                        <%@include file="filehome.jsp" %> 
+                                    </c:otherwise>
+                            </c:choose>
                         </td>
                    </tr>
                    </table>
