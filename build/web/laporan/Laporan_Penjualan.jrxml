@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c42e4308-dadb-4c5d-9102-7f4fd135abca">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="153"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="bulan" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tahun" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     mobil.`kd_mobil` AS mobil_kd_mobil,
+     mobil.`nm_mobil` AS mobil_nm_mobil,
+     mobil.`harga` AS mobil_harga,
+     mobil.`stok` AS mobil_stok,
+     detail_penjualan.`no_jual` AS detail_penjualan_no_jual,
+     detail_penjualan.`kd_mobil` AS detail_penjualan_kd_mobil,
+     detail_penjualan.`qty_jual` AS detail_penjualan_qty_jual,
+     detail_penjualan.`sub_jual` AS detail_penjualan_sub_jual,
+     penjualan.`no_jual` AS penjualan_no_jual,
+     penjualan.`tgl_jual` AS penjualan_tgl_jual,
+     penjualan.`no_faktur` AS penjualan_no_faktur,
+     penjualan.`kd_mobil` AS penjualan_kd_mobil,
+     penjualan.`total_jual` AS penjualan_total_jual,
+     penjualan.`no_pesan` AS penjualan_no_pesan,
+     date_format(penjualan.`tgl_jual`,'%M') AS bulan
+FROM
+     `detail_penjualan` detail_penjualan INNER JOIN `mobil` mobil ON detail_penjualan.`kd_mobil` = mobil.`kd_mobil`
+     INNER JOIN `penjualan` penjualan ON detail_penjualan.`no_jual` = penjualan.`no_jual`
+WHERE
+month(tgl_jual)=$P{bulan} and year(tgl_jual)=$P{tahun}]]>
+	</queryString>
+	<field name="mobil_kd_mobil" class="java.lang.String"/>
+	<field name="mobil_nm_mobil" class="java.lang.String"/>
+	<field name="mobil_harga" class="java.lang.Integer"/>
+	<field name="mobil_stok" class="java.lang.Integer"/>
+	<field name="detail_penjualan_no_jual" class="java.lang.String"/>
+	<field name="detail_penjualan_kd_mobil" class="java.lang.String"/>
+	<field name="detail_penjualan_qty_jual" class="java.lang.Integer"/>
+	<field name="detail_penjualan_sub_jual" class="java.lang.Integer"/>
+	<field name="penjualan_no_jual" class="java.lang.String"/>
+	<field name="penjualan_tgl_jual" class="java.sql.Date"/>
+	<field name="penjualan_no_faktur" class="java.lang.String"/>
+	<field name="penjualan_kd_mobil" class="java.lang.String"/>
+	<field name="penjualan_total_jual" class="java.lang.Integer"/>
+	<field name="penjualan_no_pesan" class="java.lang.String"/>
+	<field name="bulan" class="java.lang.String"/>
+	<variable name="penjualan_no_jual_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{penjualan_no_jual}]]></variableExpression>
+	</variable>
+	<variable name="penjualan_tgl_jual_1" class="java.lang.Integer" resetType="Group" resetGroup="penjualan_no_jual" calculation="Count">
+		<variableExpression><![CDATA[$F{penjualan_tgl_jual}]]></variableExpression>
+	</variable>
+	<variable name="penjualan_no_faktur_1" class="java.lang.Integer" resetType="Group" resetGroup="penjualan_no_jual" calculation="Count">
+		<variableExpression><![CDATA[$F{penjualan_no_faktur}]]></variableExpression>
+	</variable>
+	<variable name="penjualan_no_pesan_1" class="java.lang.Integer" resetType="Group" resetGroup="penjualan_no_jual" calculation="Count">
+		<variableExpression><![CDATA[$F{penjualan_no_pesan}]]></variableExpression>
+	</variable>
+	<variable name="mobil_nm_mobil_1" class="java.lang.Integer" resetType="Group" resetGroup="penjualan_no_jual" calculation="Count">
+		<variableExpression><![CDATA[$F{mobil_nm_mobil}]]></variableExpression>
+	</variable>
+	<variable name="detail_penjualan_qty_jual_1" class="java.lang.Integer" resetType="Group" resetGroup="penjualan_no_jual" calculation="Sum">
+		<variableExpression><![CDATA[$F{detail_penjualan_qty_jual}]]></variableExpression>
+	</variable>
+	<variable name="detail_penjualan_sub_jual_1" class="java.lang.Integer" resetType="Group" resetGroup="penjualan_no_jual" calculation="Sum">
+		<variableExpression><![CDATA[$F{detail_penjualan_sub_jual}]]></variableExpression>
+	</variable>
+	<group name="penjualan_no_jual">
+		<groupExpression><![CDATA[$F{penjualan_no_jual}]]></groupExpression>
+		<groupHeader>
+			<band height="122">
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="20" uuid="fa6d1f2f-5085-4f49-bcdd-627c650eaf68"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nomor Penjualan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="20" width="100" height="20" uuid="5bf5c884-4a86-4b87-aa50-2c1a30b8a498"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tanggal]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="40" width="100" height="20" uuid="2e18291f-b65c-432c-bba9-eb24c1fee380"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No. Faktur]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="60" width="100" height="20" uuid="35f23866-8974-429d-b74d-ae3b5a8f6e1e"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No. Pesan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="102" width="78" height="20" uuid="27f6ef37-0e2c-497d-aa9a-6704c9bacac8"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Kode Mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="102" width="100" height="20" uuid="7cacd951-c884-4436-9850-70ff8a94d90b"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nama Mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="274" y="102" width="100" height="20" uuid="ec1a9bb1-cafc-4185-ab27-8e5a5f57efbe"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Quantity]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="399" y="102" width="100" height="20" uuid="1f012da0-8a05-4de7-ba46-f1a6ffb31fc5"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="135" y="1" width="100" height="20" uuid="59d09aaa-f913-44aa-b015-78e969f52889"/>
+					<textFieldExpression><![CDATA[$F{penjualan_no_jual}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="135" y="21" width="100" height="20" uuid="a0222e49-efe2-4754-9e32-aa8d8bfa99d3"/>
+					<textFieldExpression><![CDATA[$F{penjualan_tgl_jual}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="135" y="41" width="100" height="20" uuid="f4363e45-c55d-4aa2-aff5-9c1f9658b2e5"/>
+					<textFieldExpression><![CDATA[$F{penjualan_no_faktur}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="135" y="61" width="100" height="20" uuid="75453d06-c8c4-4171-be19-65311d94b20a"/>
+					<textFieldExpression><![CDATA[$F{penjualan_no_pesan}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="67">
+				<textField>
+					<reportElement x="274" y="0" width="100" height="20" uuid="b6968c8e-de60-4224-ade5-803ef6bb92a2"/>
+					<textFieldExpression><![CDATA[$V{detail_penjualan_qty_jual_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00">
+					<reportElement x="399" y="28" width="100" height="20" uuid="ab60168f-f569-4e59-833d-c8b33237dc66"/>
+					<textFieldExpression><![CDATA[$V{detail_penjualan_sub_jual_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="135" y="28" width="100" height="20" uuid="0d24ad94-3328-4d3c-b1a3-ee8bfbc39894"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Grand Total]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="51" width="555" height="1" uuid="79b11b13-0cb3-420b-a301-0d99a8378e98"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="-13" width="555" height="1" uuid="ab4e42ce-a774-4b1d-a6ab-7b1dda74d25a"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="2" y="-80" width="555" height="1" uuid="01074ea5-52ca-441a-9c4a-775cbc2577b6"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="1" y="20" width="555" height="1" uuid="bdffec51-cfab-4c4a-9d81-6a0f8d290a61"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="135" y="1" width="100" height="20" uuid="0495f9b9-396d-4027-b668-08abca33eb83"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Item]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="595" height="64" uuid="3e984956-2632-45bb-91c0-bb2924de9064"/>
+				<imageExpression><![CDATA["wood.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="433" height="34" uuid="fe17efea-2096-4b02-8f98-ec3952dbb635"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Laporan Penjualan PT. Wira Muda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="1" y="39" width="325" height="25" forecolor="#FFFFFF" uuid="5281aed3-2aac-459f-9336-9d576df92ead"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Kamal Raya Raya No.18, Cengkareng, Jakarta Barat]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="6" width="555" height="1" uuid="8a46901e-1c97-47ba-aa4e-f06b8ebf596e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="12" width="78" height="20" uuid="e22365f9-c757-4588-ba26-30e8316a1d0d"/>
+				<textFieldExpression><![CDATA[$F{detail_penjualan_kd_mobil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="12" width="100" height="20" uuid="ab5b484a-5bb4-4b0d-bdfb-baaf49c53934"/>
+				<textFieldExpression><![CDATA[$F{mobil_nm_mobil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="12" width="100" height="20" uuid="8f9b3e43-b676-4001-afb6-6be2e147654f"/>
+				<textFieldExpression><![CDATA[$F{detail_penjualan_qty_jual}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="399" y="12" width="100" height="20" uuid="4ba1a854-931f-4964-bd78-b601b81d8eab"/>
+				<textFieldExpression><![CDATA[$F{detail_penjualan_sub_jual}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="531aa398-010a-48f1-836e-6a228456bfe1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="97fa6d7d-6057-4e16-90e5-e4ab37ca6336"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="91084ef2-e6a5-4d04-b9b3-1e227f9af942"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="c7328a95-85c3-4279-a935-d5980b242374"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
