@@ -102,6 +102,15 @@
                                     <c:when test="${param.hal=='cetaklapmobil'}">
                                          <%@include file="CetakLaporanMobil.jsp" %>
                                     </c:when>
+                                    <c:when test="${param.hal=='cetaklappenjualan'}">
+                                         <%@include file="CetakLaporanPenjualan.jsp" %>
+                                     </c:when>
+                                     <c:when test="${param.hal=='cetaklapretur'}">
+                                         <%@include file="CetakLaporanRetur.jsp" %>
+                                     </c:when>
+                                     <c:when test="${param.hal=='about'}">
+                                         <%@include file="about.jsp" %>           
+                                     </c:when>
                                     <c:otherwise>
                                         <%@include file="filehome.jsp" %> 
                                     </c:otherwise>
