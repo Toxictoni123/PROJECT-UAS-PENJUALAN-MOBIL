@@ -24,7 +24,8 @@
             <div id="menu">
                <ul>
                    <li><a href="beranda.jsp">Home</a></li>
-                   <li><a href="">About</a></li>
+                   <li><a href="beranda.jsp?hal=about">About</a></li>
+                   <li><a href="index.jsp">Logout</a></li>
                </ul>
             </div>
             <%--akhir menu --%>  
