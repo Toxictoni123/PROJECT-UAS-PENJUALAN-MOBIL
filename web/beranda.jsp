@@ -96,6 +96,9 @@
                                     <c:when test="${param.hal=='jual'}">
                                          <%@include file="penjualan.jsp" %>
                                     </c:when>
+                                    <c:when test="${param.hal=='retur'}">
+                                         <%@include file="retur_penjualan.jsp" %>
+                                    </c:when>
                                     <c:otherwise>
                                         <%@include file="filehome.jsp" %> 
                                     </c:otherwise>
